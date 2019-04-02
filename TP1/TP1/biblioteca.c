@@ -1,30 +1,31 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "biblioteca.h"
 //A=X;
 //B=Y;
 
 
-int sumarNumeros(int x,int y)
+float sumarNumeros(float x,float y)
 {
-    int total;
+    float total;
     total = x + y;
     return total;
 }
 
 
 
-int restarNumeros(int x,int y)
+float restarNumeros(float x,float y)
 {
-    int total;
+    float total;
     total = x - y;
     return total;
 
 }
 
 
-int multiplicarNumeros(int x,int y)
+float multiplicarNumeros(float x,float y)
 {
-    int total;
+    float total;
     total = x * y;
     return total;
 
@@ -34,16 +35,7 @@ float dividirNumeros(float x, float y)
 {
     float total;
 
-
-   while(y==0)
-   {
-       printf("ERROR: No se puede dividir por 0...");
-       printf("Ingrese el segundo numero: ");
-       scanf("%f",&y);
-
-   }
-
-   total = x / y;
+    total = x / y;
 
     return total;
 
@@ -51,44 +43,34 @@ float dividirNumeros(float x, float y)
 
 float calcularFactorialA(float x)
 {
-    float calculoA;
-    float resultadoFactorialX = 1;
+   int factorial;
 
-    while (x < 0)
+    if(x==0)
     {
-        printf("No se puede calcular el factorial de numeros negativos.\nIngrese un numero positivo para X.");
-        scanf("%f", &x);
+        factorial=1;
+    }
+    else
+    {
+        factorial=x*calcularFactorialA(x-1);
     }
 
-    for (calculoA = 1; calculoA <= x; calculoA++)
-    {
-
-        resultadoFactorialX = resultadoFactorialX * calculoA;
-
-    }
-
-    return resultadoFactorialX;
+    return factorial;
 }
 
 float calcularFactorialB(float y)
 {
-    float calculoB;
-    float resultadoFactorialY = 1;
+   int factorial;
 
-    while (y < 0)
+    if(y==0)
     {
-        printf("No se puede calcular el factorial de numeros negativos.\nIngrese un numero positivo para Y.");
-        scanf("%f", &y);
+        factorial=1;
+    }
+    else
+    {
+        factorial=y*calcularFactorialB(y-1);
     }
 
-    for (calculoB = 1; calculoB <= y; calculoB++)
-    {
-
-        resultadoFactorialY = resultadoFactorialY * calculoB;
-
-    }
-
-    return resultadoFactorialY;
+    return factorial;
 }
 
 

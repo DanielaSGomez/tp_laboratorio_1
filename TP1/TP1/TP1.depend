@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1553644759 source:c:\users\dani chan\desktop\tp laboratorio 1\tp_laboratorio_1\tp1\tp1\main.c
+1554176740 source:c:\users\dani chan\desktop\tp laboratorio 1\tp_laboratorio_1\tp1\tp1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"biblioteca.h"
 
-1553645161 source:c:\users\dani chan\desktop\tp laboratorio 1\tp_laboratorio_1\tp1\tp1\biblioteca.c
+1554175333 source:c:\users\dani chan\desktop\tp laboratorio 1\tp_laboratorio_1\tp1\tp1\biblioteca.c
 	<stdio.h>
+	<stdlib.h>
 	"biblioteca.h"
 
-1553622766 c:\users\dani chan\desktop\tp laboratorio 1\tp_laboratorio_1\tp1\tp1\biblioteca.h
+1554175286 c:\users\dani chan\desktop\tp laboratorio 1\tp_laboratorio_1\tp1\tp1\biblioteca.h
 

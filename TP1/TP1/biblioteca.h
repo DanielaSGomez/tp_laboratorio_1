@@ -3,14 +3,14 @@
  * \param segundo numero ingresado
  * \return resultado de la suma
  */
-int sumarNumeros(int,int);
+float sumarNumeros(float,float);
 
 /** \brief resta de dos valores ingresados
  * \param primer numero ingresado
  * \param segundo numero ingresado
  * \return resultado de la resta
  */
-int restarNumeros(int,int);
+float restarNumeros(float,float);
 
 /** \brief division de dos numeros ingresados
  * \param primer numero ingresado
@@ -24,7 +24,7 @@ float dividirNumeros(float,float);
  * \param segundo numero ingresado
  * \return resultado de la multiplicacion
  */
-int multiplicarNumeros(int,int);
+float multiplicarNumeros(float,float);
 
 /** \brief calculo del factorial A
  * \param valor del primer numero
