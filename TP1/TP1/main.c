@@ -15,25 +15,25 @@ int main()//FUNCION PRINCIPAL DE LA CALCULADORA
     float multiplicacion = 0;
     float factorialA = 0;
     float factorialB = 0;
-    int flagA = 0;
-    int flagB = 0;
+    int flagPrimerNumero = 0;
+    int flagSegundoNumero = 0;
 
 //PLANTEO DENTRO DEL BUCLE DO WHILE PARA QUE SE EJECUTE EL PROGRAMA POR LO MENOS UNA VEZ.
 
     do
     {
 
-        printf("<----------MENU---------->");
+        printf("<----------MENU---------->\n");
         printf("\nIngrese la opcion que corresponda: \n");
-        printf("\n1-Ingresar operando A.\n2-Ingresar operando B.\n3-Realizar operaciones:\n(Suma, Resta, Multiplicacion, Division, FActorial A, Factorial B).\n4-Resultados.\n5-Salir\n");
-        if(flagA==1)
+        printf("\n1-Ingresar 1er operando.\n2-Ingresar 2do operando.\n3-Calcular todas las operaciones:\n\t>>Calcular la suma (A+B)\n\t>>Calcular la Resta (A-B)\n\t>>Calcular la Multiplicacion (A*B)\n\t>>Calcular la Division (A/B)\n\t>>Calcular el Factorial de A\n\t>>Calcular el Factorial de B.\n4-Resultados.\n5-Salir\n");
+        if(flagPrimerNumero==1)
         {
-            printf("\nNumero A: %.2f\n",primerNumero);
+            printf("\nA = %.2f\n",primerNumero);
         }
 
-        if(flagB==1)
+        if(flagSegundoNumero==1)
         {
-            printf("\nNumero B: %.2f\n",segundoNumero);
+            printf("\nB = %.2f\n",segundoNumero);
         }
 
         scanf("%d",&opcion);//TOMO LA OPCION ELEGIDA
@@ -43,17 +43,23 @@ int main()//FUNCION PRINCIPAL DE LA CALCULADORA
             case 1:
                 printf("Ingrese el primer numero: \n");
                 scanf("%f",&primerNumero);
-                flagA = 1;
+                flagPrimerNumero = 1;
                 break;
 
             case 2:
 
                 printf("\nIngrese el segundo numero: \n");
                 scanf("%f",&segundoNumero);
-                flagB =1;
+                flagSegundoNumero =1;
                 break;
 
             case 3:
+                    if(flagPrimerNumero==0&&flagSegundoNumero==0)
+                    {
+                        printf("Ingrese operandos para calcular...");
+                    }
+                    else
+                    {
 
                     suma = sumarNumeros(primerNumero,segundoNumero);
                     resta = restarNumeros(primerNumero,segundoNumero);
@@ -86,41 +92,45 @@ int main()//FUNCION PRINCIPAL DE LA CALCULADORA
                         printf("\nALERTA: No existen factoriales de numeros negativos\n");
                     }
 
+                        printf("\t\t\tCalculos realizados!\n");
 
-                printf("\nCalculos Realizados!\n");
+                    }
+
+
                 break;
 
             case 4:
-                printf("\n<-------RESULTADOS------->\nEl resultado de la suma es: %.0f",suma);
-                printf("\nEl resultado de la resta es: %.0f",resta);
+                printf("\n<-------RESULTADOS------->\nEl resultado de A+B es: %.2f",suma);
+                printf("\nEl resultado de A-B es: %.2f",resta);
+                printf("\nEl resultado de A*B es: %.2f",multiplicacion);
                 if(segundoNumero!=0)
                 {
-                    printf("\nEl resultado de la division es: %.2f",division);
+                    printf("\nEl resultado de A/B es: %.2f",division);
 
                 }
                 else
                 {
-                   printf("\nDivision: no se puede realizar la division por 0");
+                   printf("\nEl resultado de A/B es: no se puede realizar la division por 0");
                 }
 
-                printf("\nEl resultado de la multiplicacion es: %.0f",multiplicacion);
+
 
                 if(primerNumero<0)
                 {
-                    printf("\nFactorial de A: No se pueden calcular factoriales de numeros negativos");
+                    printf("\nEl factorial de A es: No se pueden calcular factoriales de numeros negativos");
                 }
                 else
                 {
-                  printf("\nEl resultado del factorial A es: %.2f",factorialA);
+                  printf("\nEl factorial de A es: %.2f",factorialA);
                 }
 
                 if(segundoNumero<0)
                 {
-                    printf("\nFactorial de B: No se pueden calcular factoriales de numers negativos");
+                    printf("\nEl factorial de B es: No se pueden calcular factoriales de numeros negativos");
                 }
                 else
                 {
-                    printf("\nEl resultado del factorial B es: %.2f\n",factorialB);
+                    printf("\nEl factorial de B es: %.2f\n",factorialB);
                 }
 
                 break;

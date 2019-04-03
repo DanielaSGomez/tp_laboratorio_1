@@ -1,39 +1,57 @@
-/** \brief suma de dos valores ingresados
- * \param primer numero ingresado
- * \param segundo numero ingresado
- * \return resultado de la suma
+
+/** \brief funcion suma de dos valores ingresados.
+ *
+ * \param float
+ * \param float
+ * \return float
+ *
  */
 float sumarNumeros(float,float);
 
-/** \brief resta de dos valores ingresados
- * \param primer numero ingresado
- * \param segundo numero ingresado
- * \return resultado de la resta
+
+/** \brief funcion resta de dos numeros ingresados.
+ *
+ * \param float
+ * \param float
+ * \return float
+ *
  */
 float restarNumeros(float,float);
 
-/** \brief division de dos numeros ingresados
- * \param primer numero ingresado
- * \param segundo numero ingresado
- * \return resultado de la division
+
+/** \brief funcion division de dos numeros ingresados.
+ *
+ * \param float
+ * \param float
+ * \return float
+ *
  */
 float dividirNumeros(float,float);
 
-/** \brief multiplicacion de dos numeros ingresados
- * \param primer numero ingresado
- * \param segundo numero ingresado
- * \return resultado de la multiplicacion
+
+/** \brief funcion multiplicar de dos numeros ingresados.
+ *
+ * \param float
+ * \param float
+ * \return float
+ *
  */
 float multiplicarNumeros(float,float);
 
-/** \brief calculo del factorial A
- * \param valor del primer numero
- * \return resultado del factotial A
+
+/** \brief funcion factorial del primer numero ingresado.
+ *
+ * \param float
+ * \return float
+ *
  */
 float calcularFactorialA(float);
 
-/** \brief calculo del factorial B
- * \param valor del segundo numero
- * \return resultado del factorial B
+
+/** \brief funcion factorial del segundo numero ingresado.
+ *
+ * \param float
+ * \return float
+ *
  */
 float calcularFactorialB(float);
