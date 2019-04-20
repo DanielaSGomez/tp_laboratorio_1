@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1555721912 source:c:\users\dani chan\desktop\tp_laboratorio_1\tp2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"empleados.h"
+
+1555722508 source:c:\users\dani chan\desktop\tp_laboratorio_1\tp2\empleados.c
+	<stdio.h>
+	<string.h>
+	"empleados.h"
+	<ctype.h>
+
+1555721944 c:\users\dani chan\desktop\tp_laboratorio_1\tp2\empleados.h
+
