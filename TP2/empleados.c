@@ -1,5 +1,6 @@
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "empleados.h"
 #include <ctype.h>
@@ -42,7 +43,7 @@ int getInt(char mensaje[])
     int opcion;
     printf("%s",mensaje);
     scanf("%d",&opcion);
-
+    fflush(stdin);
     return opcion;
 }
 
@@ -57,7 +58,7 @@ int mostrarMenu(char mensaje[])
 {
     int opcionElegida;
     opcionElegida = getInt(mensaje);
-
+    fflush(stdin);
     return opcionElegida;
 }
 
@@ -110,49 +111,51 @@ void mostrarUnEmpleado(eEmpleados unEmpleados)
 void modificarEmpleado(eEmpleados lista[], int tam)
 {
     int idIngresado;
-    int datoACambiar;
+    int opcionMenu;
     int i;
     float nuevoSueldo;
     char nuevoNombre[51];
     char nuevoApellido[51];
     int nuevoSector;
 
-    idIngresado= getInt("\nIngrese el id que desea modificar: \n");
 
+    printf("Ingrese el id a modificar: ");
+    scanf("%d",&idIngresado);
     fflush(stdin);
+
     for(i=0;i<tam;i++)
     {
+     if(idIngresado == lista[i].id)
+     {
 
-
-    if(idIngresado==lista[i].id)
-    {
+        printf("\nElija una opcion a cambiar: \n1-Nombre\n2-Apellido\n3-Sector\n4-Sueldo");
         fflush(stdin);
-        datoACambiar = mostrarMenu("\nElija una opcion a cambiar: \n1-Nombre\n2-Apellido\n3-Sector\n4-Sueldo");
-    break;
-    }
-    else
+        scanf("%d",&opcionMenu);
+        break;
+
+     }
+     else
         {
-            printf("El id ingresado es incorrecto...Ingrese la opcion deseada y utilice un id existente...");
+            printf("El id ingresado es incorrecto...");
             break;
         }
-    fflush(stdin);
-
-
     }
 
-     switch(datoACambiar)
+     switch(opcionMenu)
     {
-        fflush(stdin);
+
         case 1:
 
-                fflush(stdin);
+
                 printf("Ingrese el nombre: ");
+                fflush(stdin);
                 gets(nuevoNombre);
                 strcpy(lista[i].name,nuevoNombre);
                 break;
         case 2:
-                fflush(stdin);
+
                 printf("Ingrese el apellido: ");
+                fflush(stdin);
                 gets(nuevoApellido);
                 strcpy(lista[i].lastName,nuevoApellido);
                 break;
