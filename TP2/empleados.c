@@ -8,7 +8,7 @@
 #define OCUPADO 0
 
 
-/** \brief
+/** \brief Funcion oara harcodear datos a la estructra
  *
  * \param lista[] empleado
  * \param tam int
@@ -40,7 +40,7 @@ int harcodearData(empleado lista[], int tam)
 
 
 
-/** \brief
+/** \brief Funcion que inciializa el array de empleados en Libre
  *
  * \param lista[] empleado
  * \param tam int
@@ -62,11 +62,11 @@ int initEmpleado(empleado lista[], int tam)
 }
 
 
-/** \brief
+/** \brief Funcion que busca si hay un espacio libre en el array
  *
  * \param lista[] empleado
  * \param tam int
- * \return int
+ * \return int indice si existe lugar, -1 si no hay lugar libre
  *
  */
 int buscarLugarLibre(empleado lista[], int tam)
@@ -86,7 +86,7 @@ int buscarLugarLibre(empleado lista[], int tam)
     return retorno;
 }
 
-/** \brief
+/** \brief funcion que busca si el id ingresado coincide con un id guardado en el array
  *
  * \param lista[] empleado
  * \param tam int
@@ -112,7 +112,7 @@ int buscarExisteId(empleado lista[], int tam, int id)
     return retorno;
 }
 
-/** \brief
+/** \brief Funcion que añade un elmento a la estructura
  *
  * \param lista[] empleado
  * \param tam int
@@ -121,7 +121,7 @@ int buscarExisteId(empleado lista[], int tam, int id)
  * \param apellido[] char
  * \param sueldo float
  * \param sector int
- * \return int
+ * \return int 0 si se pudo cargar, -1 si hubo un error
  *
  */
 int anadirEmpleado(empleado lista[], int tam, int id, char nombre[], char apellido[], float sueldo, int sector)
@@ -173,10 +173,10 @@ int anadirEmpleado(empleado lista[], int tam, int id, char nombre[], char apelli
     return retorno;
 }
 
-/** \brief
+/** \brief funcion que muestra un elemento con su atributos
  *
  * \param unEmpleado empleado
- * \return int
+ * \return int 0
  *
  */
 int mostrarUnEmpleado(empleado unEmpleado)
@@ -189,11 +189,11 @@ int mostrarUnEmpleado(empleado unEmpleado)
     return 0;
 }
 
-/** \brief
+/** \brief Funcion que muestra la lista de elementos cargados
  *
  * \param lista[] empleado
  * \param tam int
- * \return int
+ * \return int 0
  *
  */
 int mostrarListaEmpleados(empleado lista[], int tam)
@@ -216,7 +216,7 @@ int mostrarListaEmpleados(empleado lista[], int tam)
 }
 
 
-/** \brief
+/** \brief funcion que permite eleiminar un elemento dmarcando el estado como Libre
  *
  * \param lista[] empleado
  * \param tam int
@@ -261,7 +261,7 @@ int bajaEmpleado(empleado lista[], int tam, int id)
 }
 
 
-/** \brief
+/** \brief funcion que permite cambiar cualquier campo de un elemento
  *
  * \param lista[] empleado
  * \param tam int
@@ -343,7 +343,7 @@ int modificarEmpleado(empleado lista[], int tam, int id)
             return retorno;
 }
 
-/** \brief
+/** \brief Funcion que permite ordenar las listas segun lo pedido
  *
  * \param lista[] empleado
  * \param tam int
@@ -421,7 +421,7 @@ int ordenarEmpleados(empleado lista[], int tam)
 
 //danielagomez
 
-/** \brief
+/** \brief Funcion que informa datos
  *
  * \param lista[] empleado
  * \param tam int

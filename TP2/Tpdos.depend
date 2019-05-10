@@ -28,3 +28,24 @@
 
 1557025012 c:\users\dani chan\desktop\tpfinal practica\tpdos\empleados.h
 
+1557503466 source:c:\users\dani chan\desktop\tp_laboratorio_1\tp2\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<time.h>
+	"biblioteca.h"
+	"empleados.h"
+
+1557503466 c:\users\dani chan\desktop\tp_laboratorio_1\tp2\biblioteca.h
+
+1557503467 c:\users\dani chan\desktop\tp_laboratorio_1\tp2\empleados.h
+
+1557503467 source:c:\users\dani chan\desktop\tp_laboratorio_1\tp2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"empleados.h"
+	"biblioteca.h"
+
