@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1559407334 source:c:\users\alumno\downloads\tp3\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1559407334 c:\users\alumno\downloads\tp3\linkedlist.h
+
+1559407334 c:\users\alumno\downloads\tp3\employee.h
+
+1559407334 source:c:\users\alumno\downloads\tp3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1559407334 c:\users\alumno\downloads\tp3\funciones.h
+
+1559407334 c:\users\alumno\downloads\tp3\controller.h
+
+1559407334 source:c:\users\alumno\downloads\tp3\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1559573032 source:c:\users\alumno\downloads\tp3\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Employee.h"
+
+1559407334 source:c:\users\alumno\downloads\tp3\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<time.h>
+	"funciones.h"
+
