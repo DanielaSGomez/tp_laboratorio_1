@@ -31,6 +31,8 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
             //funcion del linkedlist que agrega el item
             ll_add(pArrayListEmployee,this);
         }
+
+        return 0;
     }
 
     return 1;
@@ -45,6 +47,7 @@ int parser_EmployeeFromText(FILE* pFile , LinkedList* pArrayListEmployee)
  */
 int parser_EmployeeFromBinary(FILE* pFile , LinkedList* pArrayListEmployee)
 {
+
 
     return 1;
 }
