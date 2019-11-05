@@ -7,16 +7,17 @@
 Employee* employee_new()
 {
 
-    Employee* empleado = (Employee*)malloc(sizeof(Employee));
-    return empleado;
+    Employee* this = (Employee*)malloc(sizeof(Employee));
+
+    return this;
 }
 
-Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajadasStr)
+Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajadasStr, char* sueldo)
 {
     Employee* this;
     this = employee_new();
 
-    if(!employee_setId(this,idStr)&& !employee_setNombre(this,nombreStr)&&!employee_setHorasTrabajadas(this,horasTrabajadasStr))
+    if(!employee_setId(this,idStr)&& !employee_setNombre(this,nombreStr)&&!employee_setHorasTrabajadas(this,horasTrabajadasStr)&&!employee_setSueldo(this,sueldo))
     {
        return this;
     }

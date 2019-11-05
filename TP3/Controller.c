@@ -13,6 +13,12 @@
  */
 int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
 {
+    int isEmpty;
+
+    FILE *pfile;
+
+
+
     return 1;
 }
 
