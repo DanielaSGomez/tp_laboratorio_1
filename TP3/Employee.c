@@ -15,16 +15,28 @@ Employee* employee_new()
 Employee* employee_newParametros(char* idStr,char* nombreStr,char* horasTrabajadasStr, char* sueldo)
 {
     Employee* this;
+    int auxId;
+    int auxHsTrabajadas;
+    float auxSueldo;
+
     this = employee_new();
 
-    if(!employee_setId(this,idStr)&& !employee_setNombre(this,nombreStr)&&!employee_setHorasTrabajadas(this,horasTrabajadasStr)&&!employee_setSueldo(this,sueldo))
-    {
-       return this;
-    }
+   if(this!=NULL && idStr != NULL && nombreStr != NULL && horasTrabajadasStr != NULL && sueldo != NULL)
+   {
+       auxId = atoi(idStr);
+       employee_setId(this,auxId);
 
-    employee_delete(this);
-    return NULL;
+       employee_setNombre(this, nombreStr);
 
+       auxHsTrabajadas = atoi(horasTrabajadasStr);
+       employee_setHorasTrabajadas(this,auxHsTrabajadas);
+
+       auxSueldo = atof(sueldo);
+       employee_setSueldo(this,auxSueldo);
+
+   }
+
+   return this;
 
 }
 
@@ -146,4 +158,18 @@ int employee_getSueldo(Employee* this,int* sueldo)
 
     return retorno;
 
+}
+
+
+int employee_printOneEmployee(Employee* employee)
+{
+    int retorno = 1;
+
+    if(employee != NULL)
+    {
+        printf("%d  %s    %d     %f   ", employee->id,employee->nombre,employee->horasTrabajadas,employee->sueldo);
+        retorno = 0;
+    }
+
+    return retorno;
 }

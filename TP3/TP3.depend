@@ -86,3 +86,49 @@
 
 1572997232 c:\users\alumno\desktop\tp_laboratorio_1\tp3\parser.h
 
+1573437156 source:c:\users\daniela\desktop\tp_laboratorio_1\tp3\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+
+1573434033 c:\users\daniela\desktop\tp_laboratorio_1\tp3\linkedlist.h
+
+1573434636 c:\users\daniela\desktop\tp_laboratorio_1\tp3\employee.h
+
+1573434033 source:c:\users\daniela\desktop\tp_laboratorio_1\tp3\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<time.h>
+	"funciones.h"
+
+1573434033 c:\users\daniela\desktop\tp_laboratorio_1\tp3\funciones.h
+
+1573434033 source:c:\users\daniela\desktop\tp_laboratorio_1\tp3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1573434033 c:\users\daniela\desktop\tp_laboratorio_1\tp3\controller.h
+
+1573435285 source:c:\users\daniela\desktop\tp_laboratorio_1\tp3\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+
+1573434033 c:\users\daniela\desktop\tp_laboratorio_1\tp3\parser.h
+
+1573434548 source:c:\users\daniela\desktop\tp_laboratorio_1\tp3\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Employee.h"
+

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "LinkedList.h"
 #include "Employee.h"
+#include "parser.h"
 
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo texto).
@@ -13,13 +14,23 @@
  */
 int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
 {
-    int isEmpty;
+    FILE *pFile;
+    int retorno = 1;
 
-    FILE *pfile;
+    pFile = fopen(path,"r");
 
+    if(pFile != NULL && pArrayListEmployee != NULL)
+    {
+        parser_EmployeeFromText(pFile,pArrayListEmployee);
+        printf("Datos cargados...");
+        retorno = 0;
+    }
+    else
+    {
+        printf("\nSe produjo nun error....");
+    }
 
-
-    return 1;
+    return retorno;
 }
 
 /** \brief Carga los datos de los empleados desde el archivo data.csv (modo binario).
@@ -31,7 +42,23 @@ int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+    FILE* pFile;
+    int retorno = 1;
+
+    pFile = fopen(path,"rb");
+
+    if(pFile != NULL && pArrayListEmployee != NULL)
+    {
+        parser_EmployeeFromBinary(pFile,pArrayListEmployee);
+        printf("Datos cargados...");
+        retorno = 0;
+    }
+    else
+    {
+        printf("Error....");
+    }
+
+    return retorno;
 }
 
 /** \brief Alta de empleados
@@ -43,7 +70,44 @@ int controller_loadFromBinary(char* path , LinkedList* pArrayListEmployee)
  */
 int controller_addEmployee(LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int idEmployee;
+    char strNombreEmployee[50];
+    int horasEmployee;
+    float sueldoEmployee;
+    int retorno =1;
+
+    if(pArrayListEmployee != NULL)
+    {
+        Employee* this = employee_new();
+
+        if(this!=NULL)
+        {
+            printf("\n--------------Alta nuevo empleado--------------\n");
+
+            printf("\nID: ");
+            scanf("%d",&idEmployee);
+            employee_setId(this,idEmployee);
+
+            printf("\nNombre: ");
+            fflush(stdin);
+            scanf("%s",strNombreEmployee);
+            employee_setNombre(this,strNombreEmployee);
+
+            printf("\nHoras trabajadas: ");
+            scanf("%d",&horasEmployee);
+            employee_setHorasTrabajadas(this,horasEmployee);
+
+            printf("\nSueldo: ");
+            scanf("%f",&sueldoEmployee);
+            employee_setSueldo(this,sueldoEmployee);
+
+            ll_add(pArrayListEmployee,this);
+            printf("\nSe cargo el empleado...");
+            retorno = 0;
+        }
+    }
+
+    return  retorno;
 }
 
 /** \brief Modificar datos de empleado

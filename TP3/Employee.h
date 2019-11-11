@@ -5,7 +5,7 @@ typedef struct
     int id;
     char nombre[128];
     int horasTrabajadas;
-    int sueldo;
+    float sueldo;
 }Employee;
 
 Employee* employee_new();
@@ -24,4 +24,6 @@ int employee_getHorasTrabajadas(Employee* this,int* horasTrabajadas);
 int employee_setSueldo(Employee* this,int sueldo);
 int employee_getSueldo(Employee* this,int* sueldo);
 
+
+int employee_printOneEmployee(Employee* employee);
 #endif // employee_H_INCLUDED
